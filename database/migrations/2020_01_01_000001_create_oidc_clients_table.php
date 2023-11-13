@@ -64,6 +64,10 @@ class CreateOidcClientsTable extends Migration
 
             $table->string('initiate_login_uri')->nullable();
 
+            $table->string('provider')->nullable();
+
+            $table->text('redirect');
+
             $table->boolean('trusted')->default(false);
         });
     }
